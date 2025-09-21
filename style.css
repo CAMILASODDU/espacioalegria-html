@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #FDF6E3; /* beige claro */
+  color: #2E2E2E; /* texto principal */
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;  /* centra verticalmente los elementos */
+  padding: 15px 30px;
+  background: #BD9E08; /* dorado */
+  color: white;
+}
+
+header img {
+  margin-right: 20px; /* separa un poco el logo del título */
+}
+
+header h1 {
+  flex-grow: 1;       /* hace que el h1 ocupe el espacio restante */
+  text-align: center; /* centra el texto horizontalmente */
+  margin: 0;          /* elimina margen por defecto */
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* HERO */
+.hero {
+  background: url('img/alegria_fondo.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh; /* 100% de la altura de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* si la imagen es oscura queda legible */
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  
+}
+
+.hero h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  letter-spacing: 1px;
+  margin-left: 60px; /* mismo valor que el padding del header */
+  text-align: left;
+}
+
+/* SECCIONES */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.section h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.section p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* --- LÍNEA DIVISORIA ENTRE SECCIONES --- */
+.section:not(:last-child)::after {
+  content: "";
+  display: block;
+  clear: both;            /* asegura que quede debajo de columnas o floats */
+  width: 60%;             /* ancho de la línea */
+  height: 2px;            /* grosor */
+  background-color: #ccc; /* color */
+  margin: 40px auto 0;    /* centrado con espacio */
+  border-radius: 2px;
+}
+
+/* SECCIÓN DOS COLUMNAS */
+.dos-columnas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  flex-wrap: wrap; /* para que en pantallas pequeñas se apilen las columnas */
+}
+
+.dos-columnas .columna {
+  flex: 1;
+}
+
+.dos-columnas .imagen img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.dos-columnas .texto h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.dos-columnas .texto p {
+  font-size: 16px;
+  line-height: 1.8; /* aumenta el espacio entre líneas */
+  text-align: justify; /* opcional: justifica el texto para que se vea más ordenado */
+}
+
+/* carrusel */ 
+.carrusel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px; /* podés ajustar */
+  border-radius: 12px;
+}
+
+.carrusel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carrusel-btn.prev { left: 10px; }
+.carrusel-btn.next { right: 10px; }
+
+
+/* FOOTER */
+footer {
+  background: #BD9E08;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* seccion 3 */
+/* Sección Actividades */
+#actividades {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fafafa; /* color de fondo suave */
+}
+
+#actividades h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Grid de actividades */
+.actividades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Tarjetas individuales */
+.actividad-card {
+  background: #444; /* gris oscuro */
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff; /* texto blanco */
+  text-align: center; /* centra horizontalmente */
+  display: flex;
+  justify-content: center; /* centra en el eje X */
+  align-items: center;     /* centra en el eje Y */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 100px; /* asegura altura uniforme */
+}
+
+/* Efecto hover */
+.actividad-card:hover {
+  transform: translateY(-6px);
+  background: #222; /* aún más oscuro al pasar el mouse */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
