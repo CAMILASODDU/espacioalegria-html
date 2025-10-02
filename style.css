@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Dancing Script', cursive;
 }
 
+
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Dancing Script', cursive;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -28,6 +29,8 @@ header img {
 }
 
 header h1 {
+  font-family: 'arial', sans-serif;
+  font-size: 2.5rem;
   flex-grow: 1;       /* hace que el h1 ocupe el espacio restante */
   text-align: center; /* centra el texto horizontalmente */
   margin: 0;          /* elimina margen por defecto */
@@ -40,7 +43,8 @@ header .logo {
 
 /* HERO */
 .hero {
-  background: url('img/alegria_fondo.jpg') no-repeat center center;
+  background:   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url('img/alegria_fondo.jpg') no-repeat center center;
   background-size: cover;
   height: 100vh; /* 100% de la altura de la ventana */
   display: flex;
@@ -58,9 +62,9 @@ header .logo {
 }
 
 .hero h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
+  font-family: 'Dancing Script', cursive;
+  font-size: 100px; /* tamaño h2 hero */
+  font-weight: 60;
   color: white;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
   letter-spacing: 1px;
@@ -72,10 +76,11 @@ header .logo {
 .section {
   padding: 60px 20px;
   text-align: center;
+  background-color: #F5E8B3;
 }
 
 .section:nth-child(even) {
-  background: #f5f5f5;
+  background: #F5E8B3;
 }
 
 .section h3 {
@@ -84,6 +89,7 @@ header .logo {
 }
 
 .section p {
+  font-family: 'Kufam', sans-serif;
   max-width: 700px;
   margin: auto;
   font-size: 16px;
@@ -97,7 +103,7 @@ header .logo {
   clear: both;            /* asegura que quede debajo de columnas o floats */
   width: 60%;             /* ancho de la línea */
   height: 2px;            /* grosor */
-  background-color: #ccc; /* color */
+  background-color: #BD9E08; /* color */
   margin: 40px auto 0;    /* centrado con espacio */
   border-radius: 2px;
 }
@@ -128,7 +134,12 @@ header .logo {
   margin-bottom: 15px;
 }
 
+h3 {
+  font-family: 'Dancing Script', cursive;
+}
+
 .dos-columnas .texto p {
+  font-family: 'Kufam', sans-serif;
   font-size: 16px;
   line-height: 1.8; /* aumenta el espacio entre líneas */
   text-align: justify; /* opcional: justifica el texto para que se vea más ordenado */
@@ -176,54 +187,11 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: auto;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-/* seccion 3 */
-/* Sección Actividades */
-#actividades {
-  text-align: center;
-  padding: 60px 20px;
-  background: #fafafa; /* color de fondo suave */
+footer p, .columna.texto h3 {
+  font-family: 'Kufam', sans-serif;
 }
 
-#actividades h3 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #333;
-  font-family: 'Playfair Display', serif;
-}
-
-/* Grid de actividades */
-.actividades-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Tarjetas individuales */
-.actividad-card {
-  background: #444; /* gris oscuro */
-  padding: 30px 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff; /* texto blanco */
-  text-align: center; /* centra horizontalmente */
-  display: flex;
-  justify-content: center; /* centra en el eje X */
-  align-items: center;     /* centra en el eje Y */
-  transition: all 0.3s ease;
-  cursor: pointer;
-  min-height: 100px; /* asegura altura uniforme */
-}
-
-/* Efecto hover */
-.actividad-card:hover {
-  transform: translateY(-6px);
-  background: #222; /* aún más oscuro al pasar el mouse */
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-}
 
