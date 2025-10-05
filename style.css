@@ -84,7 +84,7 @@ header .logo {
 }
 
 .section h3 {
-  font-size: 28px;
+  font-size: 50px;
   margin-bottom: 15px;
 }
 
@@ -130,19 +130,8 @@ header .logo {
 }
 
 .dos-columnas .texto h3 {
-  font-size: 28px;
+  font-size: 50px;
   margin-bottom: 15px;
-}
-
-h3 {
-  font-family: 'Dancing Script', cursive;
-}
-
-.dos-columnas .texto p {
-  font-family: 'Kufam', sans-serif;
-  font-size: 16px;
-  line-height: 1.8; /* aumenta el espacio entre líneas */
-  text-align: justify; /* opcional: justifica el texto para que se vea más ordenado */
 }
 
 /* carrusel */ 
@@ -190,7 +179,7 @@ footer {
   font-family: 'Courier New', Courier, monospace;
 }
 
-footer p, .columna.texto h3 {
+footer p {
   font-family: 'Kufam', sans-serif;
 }
 
