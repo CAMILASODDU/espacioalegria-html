@@ -29,8 +29,8 @@ header img {
 }
 
 header h1 {
-  font-family: 'arial', sans-serif;
-  font-size: 2.5rem;
+  font-family: kufam, sans-serif;
+  font-size: 25px;
   flex-grow: 1;       /* hace que el h1 ocupe el espacio restante */
   text-align: center; /* centra el texto horizontalmente */
   margin: 0;          /* elimina margen por defecto */
