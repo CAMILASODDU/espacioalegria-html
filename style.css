@@ -5,13 +5,12 @@
   font-family: 'Dancing Script', cursive;
 }
 
-
 body {
   font-family: 'Dancing Script', cursive;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #FDF6E3; /* beige claro */
+  background-color: #fff;
   color: #2E2E2E; /* texto principal */
 }
 
@@ -76,11 +75,11 @@ header .logo {
 .section {
   padding: 60px 20px;
   text-align: center;
-  background-color: #F5E8B3;
+  background-color: #fff;
 }
 
 .section:nth-child(even) {
-  background: #F5E8B3;
+  background: #fff;
 }
 
 .section h3 {
@@ -134,25 +133,32 @@ header .logo {
   margin-bottom: 15px;
 }
 
-/* carrusel */ 
+/* 📸 CARRUSEL (centrado dentro de la sección) */
 .carrusel {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  max-width: 400px; /* podés ajustar */
-  border-radius: 12px;
+  width: 100%;              /* Ocupa todo el ancho disponible dentro del contenedor */
+  max-width: 750px;         /* 🔹 Tamaño máximo para que no se vea enorme */
+  margin: 0 auto;           /* 🔹 Centra horizontalmente */
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
+/* PISTA DE IMÁGENES */
 .carrusel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
+/* IMÁGENES */
 .carrusel img {
   width: 100%;
-  flex-shrink: 0;
+  height: auto; 
+  object-fit: cover;
+  display: block;
 }
 
+/* BOTONES */
 .carrusel-btn {
   position: absolute;
   top: 50%;
@@ -163,20 +169,55 @@ header .logo {
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 50%;
+  transition: background 0.3s ease;
 }
 
-.carrusel-btn.prev { left: 10px; }
-.carrusel-btn.next { right: 10px; }
+.carrusel-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.carrusel-btn.prev { left: 15px; }
+.carrusel-btn.next { right: 15px; }
+
+/* 📱 Ajuste responsive */
+@media (max-width: 768px) {
+  .carrusel {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carrusel {
+    max-width: 320px;
+  }
+}
 
 
 /* FOOTER */
 footer {
-  background: #BD9E08;
+  background: #BD9E08; /* dorado */
   color: white;
+  padding: 20px 0;
   text-align: center;
-  padding: 20px;
-  margin-top: auto;
-  font-family: 'Courier New', Courier, monospace;
+}
+
+.social-buttons {
+  margin-bottom: 10px;
+}
+
+.social-buttons a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.social-buttons a img {
+  width: 30px; /* tamaño del icono */
+  height: 30px;
+}
+
+.social-buttons a:hover {
+  transform: scale(1.2); /* efecto al pasar el mouse */
 }
 
 footer p {
