@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espacio Alegría | Actividades</title>
+  
+  <!-- Estilos CSS -->  
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/alegria_logo.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="img/alegria_logo.png" alt="Logo" width="50">
+    <h1>Actividades</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nuestro-espacio.html">Nuestro espacio</a></li>
+        <li><a href="actividades.html">Actividades</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="galeria">
+  <div class="carrusel">
+    <button class="carrusel-btn prev">&#10094;</button>
+
+    <div class="carrusel-track">
+      <img src="img/foto1.jpg" alt="Foto 1">
+      <img src="img/foto2.jpg" alt="Foto 2">
+      <img src="img/foto3.jpg" alt="Foto 3">
+      <img src="img/foto4.jpg" alt="Foto 4">
+      <img src="img/foto5.jpg" alt="Foto 5">
+      <img src="img/foto6.jpg" alt="Foto 6">
+      <img src="img/foto7.jpg" alt="Foto 7">
+      <img src="img/foto8.jpg" alt="Foto 8">
+
+    </div>
+
+    <button class="carrusel-btn next">&#10095;</button>
+
+    <div class="carrusel-indicador">1 / 4</div>
+  </div>
+</section>
+
+<!-- Descripción de actividades -->
+   <section class="servicios">
+
+    <div class="servicio">
+      <img src="img/yoga.png" alt="Yoga y meditación">
+      <div class="texto">
+        <h2 class="rosa">YOGA Y MEDITACIÓN</h2>
+        <ul>
+          <li>Yoga Suave</li>
+          <li>Hatha Vinyasa</li>
+          <li>Yoga Integral</li>
+          <li>Yoga Terapéutico</li>
+          <li>Meditaciones</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <img src="img/terapias.png" alt="Terapias corporales">
+      <div class="texto">
+        <h2 class="violeta">TERAPIAS CORPORALES Y ENERGÉTICAS</h2>
+        <ul>
+          <li>Shiatsu y Reflexología</li>
+          <li>Osteopatía Holística (Sesiones y Cursos)</li>
+          <li>Sesiones de Barras de Access</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <img src="img/ferias.png" alt="Ferias y eventos">
+      <div class="texto">
+        <h2 class="amarillo">FERIAS, EVENTOS PARA LA COMUNIDAD</h2>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <img src="img/coaching.png" alt="Coaching y desarrollo personal">
+      <div class="texto">
+        <h2 class="azul">COACHING Y DESARROLLO PERSONAL</h2>
+        <ul>
+          <li>Coach Ontológico</li>
+          <li>Sanación y Desarrollo Personal con Medicina de las Plantas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <img src="img/astrologia.png" alt="Astrología y autoconocimiento">
+      <div class="texto">
+        <h2 class="rosa2">ASTROLOGÍA Y AUTOCONOCIMIENTO</h2>
+        <ul>
+          <li>Astrología Evolutiva y Humanística</li>
+          <li>(Consulta individual, Carta Natal, Revolución Solar y Tránsitos)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <img src="img/estimulo.png" alt="Estimulación cognitiva">
+      <div class="texto">
+        <h2 class="naranja">ESTIMULACIÓN COGNITIVA Y RECREACIÓN</h2>
+        <ul>
+          <li>Recreación y Estimulación Cognitiva para +50</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <img src="img/huertos.png" alt="Huertos y vida consciente">
+      <div class="texto">
+        <h2 class="verde">HUERTOS Y VIDA CONSCIENTE</h2>
+        <ul>
+          <li>Talleres y Consultas sobre Huertos Orgánicos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="servicio">
+      <img src="img/talleres.png" alt="Talleres y capacitaciones">
+      <div class="texto">
+        <h2 class="azul2">TALLERES Y CAPACITACIONES GRUPALES</h2>
+        <ul>
+          <li>Taller Grupal Manejo de Estrés y Emociones</li>
+          <li>Charlas, Conferencias, Talleres y Workshops</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+
+    <!-- FOOTER -->
+  <footer>
+    <div class="social-buttons">
+      <a href="https://www.instagram.com/alegriagonnet_/" target="_blank">
+        <img src="instagram-icon.png" alt="Instagram">
+      </a>
+      <a href="#" target="_blank">
+        <img src="facebook-icon.png" alt="Facebook">
+      </a>
+    </div>
+    <p>&copy; 2025 Espacio Alegría - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+const track = document.querySelector(".carrusel-track");
+const images = document.querySelectorAll(".carrusel-track img");
+const prevBtn = document.querySelector(".carrusel-btn.prev");
+const nextBtn = document.querySelector(".carrusel-btn.next");
+const indicador = document.querySelector(".carrusel-indicador");
+
+let index = 0;
+
+function updateCarrusel() {
+  track.style.transform = `translateX(${-index * 100}%)`;
+  indicador.textContent = `${index + 1} / ${images.length}`;
+}
+
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + images.length) % images.length;
+  updateCarrusel();
+});
+
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % images.length;
+  updateCarrusel();
+});
+
+updateCarrusel();
+</script>
+
+</body>
+</html>
