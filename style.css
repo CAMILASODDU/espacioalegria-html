@@ -26,17 +26,19 @@ header {
   z-index: 100; /* asegura que esté encima del hero */
 }
 
+/* Logo */
 header img {
   margin-right: 20px;
 }
 
+/* Título centrado */
 header h1 {
   font-family: 'Kufam', sans-serif;
   font-size: 25px;
   margin: 0;
-  margin-left: 470px;
-  flex-grow: 1;
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* centra horizontalmente el título */
 }
 
 /* Menú */
@@ -65,7 +67,7 @@ header h1 {
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #887205; /* dorado */
+  background-color: #887205;
   transition: width 0.3s ease;
 }
 
@@ -101,7 +103,7 @@ header h1 {
 }
 
 .hero h2 {
-  position: relative; /* para estar por encima del ::after */
+  position: relative;
   z-index: 1;
   font-family: 'Dancing Script', cursive;
   font-size: 100px;
@@ -109,9 +111,10 @@ header h1 {
   color: white;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
   letter-spacing: 1px;
-  margin-left: 60px;
-  text-align: left;
+  text-align: center; /* centra el texto */
+  margin: 0 auto;     /* elimina el margen izquierdo fijo */
 }
+
 
 /* SECCIONES */
 .section {
@@ -352,6 +355,7 @@ p {
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  border: 2px solid #000;
   flex-shrink: 0;
 }
 
