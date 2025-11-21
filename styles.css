@@ -89,6 +89,7 @@ nav a:hover {
   color: white;
   margin-top: 0;
   margin-bottom: 45px;
+  position: relative;
 }
 
 /* Capa de oscurecimiento */
