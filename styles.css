@@ -524,6 +524,32 @@ footer .iconos img {
   gap: 1.2rem;
 }
 
+.actividades ul {
+  list-style: none;           /* quita los puntos feos del navegador */
+  padding-left: 0;
+  margin: 10px 0 0;
+}
+
+.actividades ul li {
+  position: relative;
+  padding-left: 22px;         /* espacio para el punto bonito */
+  margin-bottom: 6px;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Punto personalizado */
+.actividades ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #555;                /* podés cambiarlo */
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 
 /* === LOGUITOS CON IMAGEN === */
 .loguitos {
