@@ -159,6 +159,7 @@ hr {
   margin: 20px auto;
   text-align: justify;
   font-family: kufam, sans-serif;
+  hyphens: auto;
 }
 
 /* SECCIÓN DOS COLUMNAS */
@@ -177,7 +178,7 @@ hr {
 .info-dos-columnas .texto {
   flex: 1;
   min-width: 280px;
-
+  hyphens: auto;
 }
 
 .info-dos-columnas .imagen img {
@@ -204,6 +205,7 @@ hr {
   /* ajustá según necesites */
   margin: 0 auto;
   /* centra el texto dentro del contenedor */
+  hyphens: auto;
 }
 
 @media (max-width: 768px) {
@@ -216,6 +218,7 @@ hr {
   .info-dos-columnas .texto p {
     margin: 0 auto;
     text-align: justify;
+    hyphens: auto;
   }
 
   .info-dos-columnas .imagen {
@@ -231,6 +234,7 @@ hr {
   margin: 20px auto;
   text-align: justify;
   font-family: kufam, sans-serif;
+  hyphens: auto;
 }
 
 /* FOOTER */
