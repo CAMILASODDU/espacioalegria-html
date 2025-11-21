@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: kufam, sans-serif;
   color: #333;
   line-height: 1.6;
 }
@@ -38,7 +38,8 @@ header .titulo {
   font-weight: 700;
   font-size: 1.5rem;
   white-space: nowrap;
-  font-family: 'roboto', sans-serif;
+  font-family: kufam, sans-serif;
+
 }
 
 /* Menú */
