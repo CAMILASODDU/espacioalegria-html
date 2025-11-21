@@ -1,0 +1,858 @@
+/* Estilo general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #BD9E08;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+header .logo img {
+  width: 50px;
+  height: auto;
+  border-radius: 8px;
+}
+
+header .titulo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  font-family: 'roboto', sans-serif;
+}
+
+/* Menú */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd1d1;
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  width: 25px;
+  height: 20px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* HERO */
+.hero {
+  background: url('img-grales/alegria_fondo.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 45px;
+}
+
+/* Capa de oscurecimiento */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* ajustá el último valor (0.4) para más o menos transparencia */
+  z-index: 1;
+}
+
+
+.hero-text h2 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+  /* letras más finas */
+  letter-spacing: 0.05em;
+  /* más espacio entre letras */
+  font-size: clamp(3rem, 6.5vw, 6.5rem);
+  line-height: 1;
+  /* texto más compacto */
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  padding: clamp(12px, 2vw, 28px) clamp(22px, 4vw, 50px);
+  border-radius: 12px;
+  animation: fadeIn 2s ease;
+  position: relative;
+  z-index: 2;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* SECCIONES */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 3px solid #7F8582;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* QUIENES SOMOS */
+.quienes-somos p {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: justify;
+  font-family: kufam, sans-serif;
+}
+
+/* SECCIÓN DOS COLUMNAS */
+.info-dos-columnas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  /* 🔹 reduce la separación entre texto e imagen */
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+
+
+.info-dos-columnas .texto {
+  flex: 1;
+  min-width: 280px;
+
+}
+
+.info-dos-columnas .imagen img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.info-dos-columnas .imagen {
+  display: flex;
+  justify-content: center;
+  /* 🔹 centra la imagen horizontalmente */
+  align-items: center;
+  flex: 1;
+}
+
+
+.info-dos-columnas .texto p {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: justify;
+  font-family: kufam, sans-serif;
+  max-width: 325px;
+  /* ajustá según necesites */
+  margin: 0 auto;
+  /* centra el texto dentro del contenedor */
+}
+
+@media (max-width: 768px) {
+  .info-dos-columnas {
+    flex-direction: column;
+    /* los pone uno arriba del otro */
+    text-align: center;
+  }
+
+  .info-dos-columnas .texto p {
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  .info-dos-columnas .imagen {
+    margin-top: 20px;
+    /* pequeño espacio entre texto e imagen */
+  }
+}
+
+
+/* OBJETIVOS Y VALORES */
+.valores p {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: justify;
+  font-family: kufam, sans-serif;
+}
+
+/* FOOTER */
+footer {
+  background-color: #BD9E08;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  /* Reducido de 30px a 15px para hacerlo más corto */
+}
+
+footer .iconos {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  /* Un poco menos de espacio entre iconos */
+  margin-bottom: 8px;
+  /* Menos margen para acortar */
+}
+
+footer .iconos img {
+  width: 24px;
+  /* Iconos un poco más pequeños */
+  height: 24px;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  footer {
+    padding: 12px 8px;
+  }
+
+  footer .iconos {
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+
+  footer .iconos img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 10px 6px;
+  }
+
+  footer .iconos {
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  footer .iconos img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  header .titulo {
+    position: static;
+    transform: none;
+    margin: 5px 0;
+  }
+
+  /* Mostrar hamburguesa */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Ocultar menú por defecto */
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #7F8582;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  nav.open {
+    max-height: 200px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+}
+
+/** fin estilos generales **/
+
+/** nuestro espacio **/
+
+/* carrusel */
+
+.carrusel-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carrusel-section h2 {
+  margin-top: 20px;
+}
+
+
+.carrusel-container {
+  position: relative;
+  width: 55vw;
+  aspect-ratio: 3 / 2;
+  margin: 5vh auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img,
+.slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.contador {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .carrusel-container {
+    width: 85vw;
+    border-radius: 10px;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+  }
+
+  .contador {
+    font-size: 0.85rem;
+  }
+
+  .carrusel-section {
+    margin-top: 60px;
+    /* en celulares queda un poco más pegado */
+  }
+}
+
+/* MAPA */
+.mapa {
+  margin-top: -10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.mapa p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.mapa-container {
+  position: relative;
+  width: 40%;
+  /* 🔹 40% del ancho total */
+  padding-bottom: 22.5%;
+  /* 🔹 40% de la altura original (56.25 × 0.4 ≈ 22.5) */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  /* Centrado horizontal */
+}
+
+.mapa-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 📱 Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+  .mapa-container {
+    width: 60%;
+    /* Un poco más grande en tablets */
+    padding-bottom: 33.75%;
+  }
+}
+
+/* 📱 Ajustes para celulares */
+@media (max-width: 480px) {
+  .mapa-container {
+    width: 90%;
+    /* Casi todo el ancho en móviles */
+    padding-bottom: 50%;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .carousel-btn {
+    padding: 8px 12px;
+    font-size: 1.2rem;
+  }
+}
+
+/** fin nuestro espacio **/
+
+/* ACTIVIDADES */
+/* === CONTENEDOR GENERAL === */
+.actividades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem 5rem;
+  padding: 3rem 5%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .actividades {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === CADA ACTIVIDAD === */
+.actividad {
+  display: flex;
+  align-items: flex-start;
+  /* 👈 alinea la imagen con el título */
+  gap: 1.2rem;
+}
+
+
+/* === LOGUITOS CON IMAGEN === */
+.loguitos {
+  flex-shrink: 0;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  /* 👈 borde negro como en tu ejemplo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7901d;
+  /* color de fondo */
+}
+
+.loguitos img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+
+}
+
+/* === TEXTOS === */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contenido h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e67e22;
+  /* color similar al círculo */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.contenido p {
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  color: #222;
+  line-height: 1.4;
+  text-align: left;
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 700px) {
+  .actividad {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .loguitos {
+    margin-bottom: 0.8rem;
+  }
+
+  .contenido h3 {
+    text-align: left;
+  }
+}
+
+/* FIN ESTILOS ACTIVIDADES */
+
+/* =============================
+   VALORES + IMAGEN A LA DERECHA
+   ============================= */
+
+.valores-con-imagen {
+  display: flex;
+
+  gap: 60px;
+  padding: 50px 20px;
+}
+
+/* Columna izquierda */
+.valores-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: "Poppins", sans-serif;
+  align-items: flex-start;
+  /* 🔥 Alinea círculos + textos a la izquierda */
+
+}
+
+.valor-item {
+  display: flex;
+  align-items: center;
+  /* círculo + palabra alineados */
+  gap: 12px;
+}
+
+.valor-item span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+}
+
+.valor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.valor p {
+  margin: 0;
+  font-size: 22px;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.valor p strong {
+  font-weight: 700;
+  color: #333;
+}
+
+
+
+/* Imagen derecha */
+.imagen-derecha img {
+  width: 330px;
+  max-width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .valores-con-imagen {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .valor {
+    justify-content: center;
+  }
+
+  .imagen-derecha img {
+    width: 80%;
+  }
+}
+
+
+/* seccion siglas */
+
+/* --------------- CONTENEDOR PRINCIPAL CENTRADO VERTICAL --------------- */
+.contenedor-principal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: auto;
+}
+
+
+/* --------------- CAJA INTERNA CENTRADA --------------- */
+.contenedor-valores {
+  display: flex;
+  gap: 150px;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* --------------- LISTA IZQUIERDA --------------- */
+.valores-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.valor-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* --------------- CÍRCULOS --------------- */
+.circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+/* Colores personalizados (ESTOS SI ESTAN BIEN)*/
+.rosa {
+  background: #F5B5D2;
+}
+
+.blanco {
+  background: #FFFFFF;
+  border: 2px solid #ddd;
+}
+
+.verde {
+  background: #52AE32;
+}
+
+.amarillo {
+  background: #FEDB00;
+}
+
+.lavanda {
+  background: #D6C8FF;
+}
+
+.naranja {
+  background: #FF7F00;
+}
+
+.azul {
+  background: #0101FF;
+}
+
+/* CENTRAR LETRA DENTRO DEL CÍRCULO */
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333; /* si querés la letra siempre blanca, avisame */
+}
+
+/* RESPONSIVE: achica círculos y texto en pantallas chicas */
+@media (max-width: 600px) {
+  .circle {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .valor-item span {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .circle {
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+  }
+
+  .valor-item span {
+    font-size: 16px;
+  }
+}
+
+
+/* --------------- TEXTO --------------- */
+.valor-item span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #444;
+}
+
+.valor-item span::first-letter {
+  font-weight: 700;
+  /* Negrita */
+}
+
+
+/* --------------- IMAGEN DERECHA --------------- */
+.imagen-valores img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+}
+
+/* --------------- RESPONSIVE (CELULAR) --------------- */
+@media (max-width: 768px) {
+  .contenedor-valores {
+    flex-direction: column;
+    /* Imagen abajo */
+    text-align: center;
+  }
+
+  .valores-lista {
+    align-items: left;
+    /* Centra los círculos en celular */
+
+  }
+
+  .valor-item {
+    justify-content: center;
+    /* Círculo + texto centrados */
+  }
+
+  .imagen-valores img {
+    width: 220px;
+    /* Un poco más chico en celular */
+  }
+}
+
+/* Espaciado uniforme debajo de todas las líneas rojas */
+hr {
+  margin-bottom: 40px !important;
+}
+
+/* En pantallas grandes, reducir el padding general de las secciones */
+@media (min-width: 1024px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'dancing script', cursive;
+}
+
+/* EXCEPCIÓN: EL HERO MANTIENE SU ESTILO ESPECIAL */
+.hero-text h2 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+  font-size: clamp(3rem, 6.5vw, 6.5rem);
+  color: #fff;
+}
+

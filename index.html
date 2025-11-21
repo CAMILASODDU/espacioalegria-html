@@ -3,24 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Espacio Alegría</title>
-  
-  <!-- Estilos CSS -->  
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="img/alegria_logo.png">
+  <title>Espacio ALEGRIA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img-grales/alegria_logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kufam&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-    <img src="img/alegria_logo.png" alt="Logo" width="50">
-    <h1>Fundación Espacio ALEGRIA</h1>
-    <nav>
-      <ul class="menu">
+    <div class="logo">
+      <img src="img-grales/alegria_logo.png" alt="Logo">
+    </div>
+
+    <h1 class="titulo">Fundación Espacio ALEGRIA</h1>
+
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menú -->
+    <nav id="nav">
+      <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="nuestro-espacio.html">Nuestro espacio</a></li>
+        <li><a href="nuestro-espacio.html">Nuestro Espacio</a></li>
         <li><a href="actividades.html">Actividades</a></li>
       </ul>
     </nav>
@@ -28,43 +40,109 @@
 
   <!-- HERO -->
   <section class="hero" id="inicio">
-    <h2>Un lugar único</h2>
-  </section>
-
-  <!-- SECCIONES -->
-  <section class="section">
-    <h3>¿Quiénes somos?</h3>
-    <p>Fundación Espacio ALEGRIA es una fundación sin fines de lucro, nos encontramos en Manuel B.Gonnet, Partido de La Plata, Pcia. de Bs As. Nuestro objetivo esencial, es el de acercar diversas herramientas y propuestas de Bienestar Integral a nuestra Comunidad. Las mismas van desde charlas, seminarios,actividades lúdico/cognitivas, creativas, e informativas, relacionadas a la autogestión de la Salud, Medio Ambiente, Gestión de las emociones, actividades y talleres vivenciales para una Sanación y Armonía integral del Ser. Las personas que se acercan a nuestra Fundación para ser parte de ella, tienen como principal objetivo, el servicio al otro y a la Comunidad, aportando herramientas para que nuestra vida, y nuestras relaciones, con nosotros y nuestro entorno, sean armónicas y adecuadas a las necesidades y circunstancias que el contexto nos presente, como asi también aquellas que permitan tener una gestión más responsable de nuestra salud física, mental y emocional y que a su vez nos permita tener una consciencia más amplia de nosotros mismos, en interacción con el todo.</p>  
-  </section>
-
-  <section class="section">
-    <div class="dos-columnas derecha">
-      <div class="columna texto">
-        <h3>Objetivo</h3>
-        <p>Nuestro Objetivo es generar un impacto virtuoso para la vida de las personas y la comunidad toda, promoviendo, actividades, herramientas y enseñanzas para el bienestar individual y colectivo de las personas.</p>
-      </div>
-      <div class="columna imagen">
-        <img src="foto_as_de_luz.jpg" alt="Imagen de ejemplo">
-      </div>
+    <div class="hero-text">
+      <h2>Un lugar único</h2>
     </div>
   </section>
 
-  <section class="section">
-    <h3>Misión y valores</h3>
-    <p>Somos una Fundación comprometida con el bien común, accionamos en ello a través de la generosidad, la empatía, el respeto y la difusión de herramientas que consideramos vitales para la vida de un individuo y la comunidad, aunando voluntades para ello. Nuestra misión es concientizar a al comunidad sobre la necesidad de sostener un bienestar integral en todas las Áreas de la Vida de un Ser Humano, y en concordancia con el medio y las circunstancias que lo rodean.</p>
+
+  <!-- QUIÉNES SOMOS -->
+  <section class="quienes-somos" id="nuestro-espacio">
+    <h2>Quiénes Somos</h2>
+    <p>Fundación Espacio ALEGRIA es una fundación sin fines de lucro, nos encontramos en Manuel B.Gonnet, Partido de La Plata, Pcia. de Bs As. Nuestro objetivo esencial, es el de acercar diversas herramientas y propuestas de Bienestar Integral a nuestra Comunidad. Las mismas van desde charlas, seminarios,actividades lúdico/cognitivas, creativas, e informativas, relacionadas a la autogestión de la Salud, Medio Ambiente, Gestión de las emociones, actividades y talleres vivenciales para una Sanación y Armonía integral del Ser. Las personas que se acercan a nuestra Fundación para ser parte de ella, tienen como principal objetivo, el servicio al otro y a la Comunidad, aportando herramientas para que nuestra vida, y nuestras relaciones, con nosotros y nuestro entorno, sean armónicas y adecuadas a las necesidades y circunstancias que el contexto nos presente, como asi también aquellas que permitan tener una gestión más responsable de nuestra salud física, mental y emocional y que a su vez nos permita tener una consciencia más amplia de nosotros mismos, en interacción con el todo.</p>
   </section>
+
+  <hr>
+
+  <!-- SECCIÓN DOS COLUMNAS -->
+  <section class="info-dos-columnas">
+    <div class="texto">
+      <h2>Objetivo</h2>
+      <p>Nuestro Objetivo es generar un impacto virtuoso para la vida de las personas y la comunidad toda, promoviendo, actividades, herramientas y enseñanzas para el bienestar individual y colectivo de las personas.</p>
+    </div>
+    <div class="imagen">
+      <img src="img-grales/foto_as_de_luz.jpg" alt="Imagen del espacio">
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- OBJETIVOS Y VALORES -->
+  <section class="valores" id="actividades">
+    <h2>Misión y Valores</h2>
+    <P>Somos una Fundación comprometida con el bien común, accionamos en ello a través de la generosidad, la empatía, el respeto y la difusión de herramientas que consideramos vitales para la vida de un individuo y la comunidad, aunando voluntades para ello. Nuestra misión es concientizar a al comunidad sobre la necesidad de sostener un bienestar integral en todas las Áreas de la Vida de un Ser Humano, y en concordancia con el medio y las circunstancias que lo rodean.</P>
+  </section>
+
+  <hr>
+  
+  <!-- SECCIÓN siglas -->
+  
+  <section>
+    <div class="contenedor-principal">
+      <div class="contenedor-valores">
+        <div class="valores-lista">
+          <div class="valor-item">
+            <div class="circle rosa">A</div>
+            <span>AMOR</span>
+          </div>
+  
+          <div class="valor-item">
+            <div class="circle blanco">L</div>
+            <span>LEALTAD</span>
+          </div>
+  
+          <div class="valor-item">
+            <div class="circle verde">E</div>
+            <span>EMPATÍA</span>
+          </div>
+  
+          <div class="valor-item">
+            <div class="circle amarillo">G</div>
+            <span>GENEROSIDAD</span>
+          </div>
+  
+          <div class="valor-item">
+            <div class="circle lavanda">R</div>
+            <span>RESPETO</span>
+          </div>
+  
+          <div class="valor-item">
+            <div class="circle naranja">I</div>
+            <span>INSPIRACIÓN</span>
+          </div>
+  
+          <div class="valor-item">
+            <div class="circle azul">A</div>
+            <span>ARMONÍA</span>
+          </div>
+        </div>
+  
+        <div class="imagen-valores">
+          <img src="img-grales/alegria_logo.png" alt="Mariposa">
+        </div>
+      </div>
+    </div>
+  
+  </section>
+
 
   <!-- FOOTER -->
   <footer>
-    <div class="social-buttons">
-      <a href="https://www.instagram.com/alegriagonnet_/" target="_blank">
-        <img src="instagram-icon.png" alt="Instagram">
+    <div class="iconos">
+      <a href="https://www.instagram.com/espacioalegria_/" target="_blank">
+        <img src="img-grales/instagram-icon.png" alt="Icono 1">
       </a>
-      <a href="#" target="_blank">
-        <img src="facebook-icon.png" alt="Facebook">
+      <a href="https://www.facebook.com/TU_USUARIO" target="_blank">
+        <img src="img-grales/facebook-icon.png" alt="Icono 2">
+      </a>
+      <a href="mailto:espacioalegriagonnet@gmail.com">
+        <img src="img-grales/logomailgris.png" alt="Icono 3">
+      </a>      
+      <a href="https://wa.me/+5492215042301" target="_blank">
+        <img src="img-grales/logo-wsp-gris.png" alt="Icono 4">
       </a>
     </div>
-    <p>&copy; 2025 Espacio Alegría - Todos los derechos reservados</p>
+    <p>© 2025 Mi Espacio. Todos los derechos reservados.</p>
   </footer>
 
   <script src="script.js"></script>

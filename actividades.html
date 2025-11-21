@@ -1,183 +1,280 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Espacio Alegría | Actividades</title>
-  
-  <!-- Estilos CSS -->  
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="img/alegria_logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fundación Espacio ALEGRIA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" href="img-grales/alegria_logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="img-grales/alegria_logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kufam&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <!-- HEADER -->
   <header>
-    <img src="img/alegria_logo.png" alt="Logo" width="50">
-    <h1>Actividades</h1>
-    <nav>
-      <ul class="menu">
+    <div class="logo">
+      <img src="img-grales/alegria_logo.png" alt="Logo" />
+    </div>
+
+    <h1 class="titulo">Fundación Espacio ALEGRIA</h1>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav">
+      <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="nuestro-espacio.html">Nuestro espacio</a></li>
-        <li><a href="actividades.html">Actividades</a></li>
+        <li><a href="nuestro-espacio.html">Nuestro Espacio</a></li>
+        <li><a href="actividades.html" class="active">Actividades</a></li>
       </ul>
     </nav>
   </header>
 
-<section class="galeria">
-  <div class="carrusel">
-    <button class="carrusel-btn prev">&#10094;</button>
+  <!-- CARRUSEL NUEVO -->
+  <section class="carrusel-section">
+    <h2>Actividades</h2>
 
-    <div class="carrusel-track">
-      <img src="img/foto1.jpg" alt="Foto 1">
-      <img src="img/foto2.jpg" alt="Foto 2">
-      <img src="img/foto3.jpg" alt="Foto 3">
-      <img src="img/foto4.jpg" alt="Foto 4">
-      <img src="img/foto5.jpg" alt="Foto 5">
-      <img src="img/foto6.jpg" alt="Foto 6">
-      <img src="img/foto7.jpg" alt="Foto 7">
-      <img src="img/foto8.jpg" alt="Foto 8">
+    <div class="carrusel-container">
+      <div class="carrusel">
 
-    </div>
+        <div class="slide active">
+          <img src="actividades/fotos/foto1.jpg" alt="Foto 1">
+        </div>
 
-    <button class="carrusel-btn next">&#10095;</button>
+        <div class="slide">
+          <img src="actividades/fotos/foto2.jpg" alt="Foto 2">
+        </div>
 
-    <div class="carrusel-indicador">1 / 4</div>
-  </div>
-</section>
+        <div class="slide">
+          <img src="actividades/fotos/foto2a.jpg" alt="Foto 2">
+        </div>
 
-<!-- Descripción de actividades -->
-   <section class="servicios">
+        <div class="slide">
+          <img src="actividades/fotos/foto2b.jpg" alt="Foto 2">
+        </div>
 
-    <div class="servicio">
-      <img src="img/yoga.png" alt="Yoga y meditación">
-      <div class="texto">
-        <h2 class="rosa">YOGA Y MEDITACIÓN</h2>
-        <ul>
-          <li>Yoga Suave</li>
-          <li>Hatha Vinyasa</li>
-          <li>Yoga Integral</li>
-          <li>Yoga Terapéutico</li>
-          <li>Meditaciones</li>
-        </ul>
+        <div class="slide">
+          <img src="actividades/fotos/foto2c.jpg" alt="Foto 2">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto3.jpg" alt="Foto 3">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto4.jpg" alt="Foto 4">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto5.jpg" alt="Foto 5">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto6.jpg" alt="Foto 6">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto7.jpg" alt="Foto 7">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto8.jpg" alt="Foto 8">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto8bis.jpg" alt="Foto 8bis">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto9.jpg" alt="Foto 9">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto10.jpg" alt="Foto 10">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto11.jpg" alt="Foto 11">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto12.jpg" alt="Foto 2">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto13.jpg" alt="Foto 3">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto14.jpg" alt="Foto 4">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto15.jpg" alt="Foto 5">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto16.jpg" alt="Foto 6">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto17.jpg" alt="Foto 7">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto18.jpg" alt="Foto 8">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto19.jpg" alt="Foto 8bis">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto20.jpg" alt="Foto 9">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto21.jpg" alt="Foto 10">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto22.jpg" alt="Foto 11">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto23.jpg" alt="Foto 8bis">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto24.jpg" alt="Foto 9">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto25.jpg" alt="Foto 10">
+        </div>
+
+        <div class="slide">
+          <img src="actividades/fotos/foto26.jpg" alt="Foto 11">
+        </div>
+
       </div>
-    </div>
 
-    <div class="servicio">
-      <img src="img/masajes.png" alt="Terapias corporales">
-      <div class="texto">
-        <h2 class="violeta">TERAPIAS CORPORALES Y ENERGÉTICAS</h2>
-        <ul>
-          <li>Shiatsu y Reflexología</li>
-          <li>Osteopatía Holística (Sesiones y Cursos)</li>
-          <li>Sesiones de Barras de Access</li>
-        </ul>
-      </div>
+      <button class="btn prev">&#10094;</button>
+      <button class="btn next">&#10095;</button>
+      <div class="contador">1 / 15</div>
     </div>
-
-    <div class="servicio">
-      <img src="img/huerta.png" alt="Huertos y vida consciente">
-      <div class="texto">
-        <h2 class="verde">HUERTOS Y VIDA CONSCIENTE</h2>
-        <ul>
-          <li>Talleres y Consultas sobre Huertos Orgánicos</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="servicio">
-      <img src="img/reunion.png" alt="Coaching y desarrollo personal">
-      <div class="texto">
-        <h2 class="azul">COACHING Y DESARROLLO PERSONAL</h2>
-        <ul>
-          <li>Coach Ontológico</li>
-          <li>Sanación y Desarrollo Personal con Medicina de las Plantas</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="servicio">
-      <img src="img/astrologia.png" alt="Astrología y autoconocimiento">
-      <div class="texto">
-        <h2 class="rosa2">ASTROLOGÍA Y AUTOCONOCIMIENTO</h2>
-        <ul>
-          <li>Astrología Evolutiva y Humanística</li>
-          <li>(Consulta individual, Carta Natal, Revolución Solar y Tránsitos)</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="servicio">
-      <img src="img/taller.png" alt="Estimulación cognitiva">
-      <div class="texto">
-        <h2 class="naranja">RECREACIÓN Y ESTIMULACIÓN COGNITIVA</h2>
-        <ul>
-          <li>Recreación y Estimulación Cognitiva para +50</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="servicio">
-      <img src="img/reunion.png" alt="Talleres y capacitaciones">
-      <div class="texto">
-        <h2 class="azul2">TALLERES Y CAPACITACIONES GRUPALES</h2>
-        <ul>
-          <li>Taller Grupal Manejo de Estrés y Emociones</li>
-          <li>Charlas, Conferencias, Talleres y Workshops</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="servicio">
-      <img src="img/globos.png" alt="Ferias y eventos">
-      <div class="texto">
-        <h2 class="amarillo">FERIAS, EVENTOS PARA LA COMUNIDAD</h2>
-      </div>
-    </div>
-
   </section>
 
-    <!-- FOOTER -->
-  <footer>
-    <div class="social-buttons">
-      <a href="https://www.instagram.com/alegriagonnet_/" target="_blank">
-        <img src="instagram-icon.png" alt="Instagram">
-      </a>
-      <a href="#" target="_blank">
-        <img src="facebook-icon.png" alt="Facebook">
-      </a>
+  <hr />
+
+  <!-- SECCIÓN ACTIVIDADES -->
+  <section class="actividades">
+  <div class="actividad">
+    <div class="loguitos" style="background-color:#e15b8c;">
+      <img src="img-grales/yoga.png" alt="Recreación y Estimulación Cognitiva">
     </div>
-    <p>&copy; 2025 Espacio Alegría - Todos los derechos reservados</p>
+    <div class="contenido">
+      <h3>YOGA Y MEDITACIÓN</h3>
+      <p>Yoga Suave<br>Hatha Vinyasa<br>Yoga Integral<br>Yoga Terapéutico<br>Meditaciones</p>
+    </div>
+  </div>
+
+  <div class="actividad">
+    <div class="loguitos" style="background-color:#b49ad6;">
+      <img src="img-grales/masajes.png" alt="Recreación y Estimulación Cognitiva">
+    </div>
+    <div class="contenido">
+      <h3>TERAPIAS CORPORALES Y ENERGÉTICAS</h3>
+      <p>Shiatsu y Reflexología<br>Osteopatía Holística<br>Sesiones de Barras de Access</p>
+    </div>
+  </div>
+
+  <div class="actividad">
+    <div class="loguitos" style="background-color:#7ac47a;">
+      <img src="img-grales/huerta.png" alt="Recreación y Estimulación Cognitiva">
+    </div>
+    <div class="contenido">
+      <h3>HUERTOS Y VIDA CONSCIENTE</h3>
+      <p>Talleres y Consultas sobre Huertos Orgánicos</p>
+    </div>
+  </div>
+
+  <div class="actividad">
+    <div class="loguitos" style="background-color:#5d82d1;">
+      <img src="img-grales/reunion.png" alt="Recreación y Estimulación Cognitiva">
+    </div>
+    <div class="contenido">
+      <h3>COACHING Y DESARROLLO PERSONAL</h3>
+      <p>Coach Ontológico<br>Sanación y Desarrollo Personal con Medicina de las Plantas</p>
+    </div>
+  </div>
+
+    <div class="actividad">
+    <div class="loguitos" style="background-color:#7ac47a;">
+      <img src="img-grales/astrologia.png" alt="Recreación y Estimulación Cognitiva">
+    </div>
+    <div class="contenido">
+      <h3>ASTROLOGÍA Y AUTOCONOCIMIENTO</h3>
+      <p>Astrología Evolutiva y Humanística <br>
+        (Consulta individual, Carta Natal, Revolución Solar y Tránsitos)</p>
+    </div>
+  </div>
+
+
+  <div class="actividad">
+    <div class="loguitos" style="background-color:#f7901d;">
+      <img src="img-grales/taller.png" alt="Recreación y Estimulación Cognitiva">
+    </div>
+    <div class="contenido">
+      <h3>RECREACIÓN Y ESTIMULACIÓN COGNITIVA</h3>
+      <p>Recreación y Estimulación Cognitiva para +50</p>
+    </div>
+  </div>
+
+
+
+    <div class="actividad">
+    <div class="loguitos" style="background-color:#7ac47a;">
+      <img src="img-grales/reunion.png" alt="Recreación y Estimulación Cognitiva">
+    </div>
+    <div class="contenido">
+      <h3>TALLERES Y CAPACITACIONES GRUPALES</h3>
+      <p>Talleres y Consultas sobre Huertos Orgánicos</p>
+    </div>
+  </div>
+
+  <div class="actividad">
+    <div class="loguitos" style="background-color:#5d82d1;">
+      <img src="img-grales/globos.png" alt="Recreación y Estimulación Cognitiva">
+    </div>
+    <div class="contenido">
+      <h3>FERIAS, EVENTOS PARA LA COMUNIDAD</h3>
+      <p>Coach Ontológico<br>Sanación y Desarrollo Personal con Medicina de las Plantas</p>
+    </div>
+  </div>
+
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="iconos">
+      <img src="img-grales/instagram-icon.png" alt="Icono 1">
+      <img src="img-grales/facebook-icon.png" alt="Icono 2">
+      <img src="img-grales/logomailgris.png" alt="Icono 3">
+      <img src="img-grales/logo-wsp-gris.png" alt="Icono 4">
+    </div>
+    <p>© 2025 Mi Espacio. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-const track = document.querySelector(".carrusel-track");
-const images = document.querySelectorAll(".carrusel-track img");
-const prevBtn = document.querySelector(".carrusel-btn.prev");
-const nextBtn = document.querySelector(".carrusel-btn.next");
-const indicador = document.querySelector(".carrusel-indicador");
-
-let index = 0;
-
-function updateCarrusel() {
-  track.style.transform = `translateX(${-index * 100}%)`;
-  indicador.textContent = `${index + 1} / ${images.length}`;
-}
-
-prevBtn.addEventListener("click", () => {
-  index = (index - 1 + images.length) % images.length;
-  updateCarrusel();
-});
-
-nextBtn.addEventListener("click", () => {
-  index = (index + 1) % images.length;
-  updateCarrusel();
-});
-
-updateCarrusel();
-</script>
-
+  <script src="script.js"></script>
+  <script src="carousel.js"></script>
 </body>
 </html>

@@ -1,38 +1,54 @@
-/* carrusel */ 
-  const track = document.querySelector(".carrusel-track");
-  const images = document.querySelectorAll(".carrusel img");
-  const prevBtn = document.querySelector(".carrusel-btn.prev");
-  const nextBtn = document.querySelector(".carrusel-btn.next");
+const slides = document.querySelectorAll('.slide');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const contador = document.querySelector('.contador');
+let index = 0;
+let autoPlayTimer;
 
-  let index = 0;
-  let autoSlide;
-
-  function showSlide(i) {
-    index = (i + images.length) % images.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  function startAutoSlide() {
-    autoSlide = setInterval(() => showSlide(index + 1), 3000); // cada 3 segundos
-  }
-
-  function stopAutoSlide() {
-    clearInterval(autoSlide);
-  }
-
-  prevBtn.addEventListener("click", () => {
-    showSlide(index - 1);
-    stopAutoSlide();
-    startAutoSlide();
+function mostrarSlide(n) {
+  slides.forEach(s => {
+    s.classList.remove('active');
+    const video = s.querySelector('video');
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
   });
 
-  nextBtn.addEventListener("click", () => {
-    showSlide(index + 1);
-    stopAutoSlide();
-    startAutoSlide();
-  });
+  const slideActual = slides[n];
+  slideActual.classList.add('active');
+  if (contador) contador.textContent = `${n + 1} / ${slides.length}`;
 
-  // Iniciar automático
-  startAutoSlide();
+  const video = slideActual.querySelector('video');
+  clearTimeout(autoPlayTimer);
 
-/* fin carrusel */
+  if (video) {
+    video.play();
+    video.onended = siguiente;
+  } else {
+    autoPlayTimer = setTimeout(siguiente, 5000);
+  }
+}
+
+function siguiente() {
+  index = (index + 1) % slides.length;
+  mostrarSlide(index);
+}
+
+function anterior() {
+  index = (index - 1 + slides.length) % slides.length;
+  mostrarSlide(index);
+}
+
+// 👇👇👇 FIX DEL ERROR QUE ROMPÍA EL MENÚ 👇👇👇
+if (next) next.addEventListener('click', siguiente);
+if (prev) prev.addEventListener('click', anterior);
+if (contador) contador.textContent = `1 / ${slides.length}`;
+
+// --- MENÚ HAMBURGUESA ---
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("open");
+});

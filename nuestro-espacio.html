@@ -1,111 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Espacio Alegría | Nuestro espacio</title>
-  
-  <!-- Estilos CSS -->  
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="img/alegria_logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fundación Espacio ALEGRIA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" href="img-grales/alegria_logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="img-grales/alegria_logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kufam&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-    <img src="img/alegria_logo.png" alt="Logo" width="50">
-    <h1>Nuestro espacio</h1>
-    <nav>
-      <ul class="menu">
+    <div class="logo">
+      <img src="img-grales/alegria_logo.png" alt="Logo">
+    </div>
+    <h1 class="titulo">Fundación Espacio ALEGRIA</h1>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav">
+      <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="nuestro-espacio.html">Nuestro espacio</a></li>
+        <li><a href="nuestro-espacio.html" class="active">Nuestro Espacio</a></li>
         <li><a href="actividades.html">Actividades</a></li>
       </ul>
     </nav>
   </header>
 
-<section class="galeria">
-  <div class="carrusel">
-    <button class="carrusel-btn prev">&#10094;</button>
+  <!-- CARRUSEL NUEVO -->
+  <section class="carrusel-section">
+    <h2>Nuestro Espacio</h2>
 
-    <div class="carrusel-track">
-      <img src="img/foto1.jpg" alt="Foto 1">
-      <img src="img/foto2.jpg" alt="Foto 2">
-      <img src="img/foto3.jpg" alt="Foto 3">
-      <img src="img/foto4.jpg" alt="Foto 4">
-      <img src="img/foto5.jpg" alt="Foto 5">
-      <img src="img/foto6.jpg" alt="Foto 6">
-      <img src="img/foto7.jpg" alt="Foto 7">
-      <img src="img/foto8.jpg" alt="Foto 8">
+    <div class="carrusel-container">
+      <div class="carrusel">
 
+        <div class="slide active">
+          <img src="nuestro_espacio/fotos/foto1.jpg" alt="Foto 1">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto2.jpg" alt="Foto 2">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto3.jpg" alt="Foto 3">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto4.jpg" alt="Foto 4">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto5.jpg" alt="Foto 5">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto6.jpg" alt="Foto 6">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto7.jpg" alt="Foto 7">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto8.jpg" alt="Foto 8">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto8bis.jpg" alt="Foto 8bis">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto9.jpg" alt="Foto 9">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto10.jpg" alt="Foto 10">
+        </div>
+
+        <div class="slide">
+          <img src="nuestro_espacio/fotos/foto11.jpg" alt="Foto 11">
+        </div>
+
+      </div>
+
+      <button class="btn prev">&#10094;</button>
+      <button class="btn next">&#10095;</button>
+      <div class="contador">1 / 15</div>
     </div>
+  </section>
 
-    <button class="carrusel-btn next">&#10095;</button>
+  <hr>
 
-    <div class="carrusel-indicador">1 / 4</div>
-  </div>
-</section>
+  <!-- MAPA -->
+  <section class="mapa">
+    <h2>Ubicación</h2>
+    <p>482 e Cno General Belgrano y 21 N° 2640, La Plata, Buenos Aires.</p>
 
-<!-- Mapa -->
-<h3>Ubicación</h3>
-<p>482 e Cno General Belgrano y 21 N° 2640</p>
-<section class="region-mapa">
-    <div class="mapa">
+    <div class="mapa-container">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.872791234075!2d-57.9488!3d-34.9059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e8f05e4c3a43%3A0x2f6a2b4dbe1a86b3!2sC.%20482%20%26%20Cno.%20Gral.%20Belgrano%2C%20La%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1730244200000!5m2!1ses!2sar"
-        width="100%"
-        height="350"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.992796925906!2d-58.02708352368085!3d-34.91429597476818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2df731a94eb15%3A0x2b0e0a33f329b274!2sCno.%20Gral.%20Belgrano%20%26%20C.%20482%2C%20City%20Bell%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1730913772102!5m2!1ses!2sar"
+        allowfullscreen
+        loading="lazy">
       </iframe>
-
     </div>
-</section>
+  </section>
 
-
-    <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer>
-    <div class="social-buttons">
-      <a href="https://www.instagram.com/alegriagonnet_/" target="_blank">
-        <img src="instagram-icon.png" alt="Instagram">
-      </a>
-      <a href="#" target="_blank">
-        <img src="facebook-icon.png" alt="Facebook">
-      </a>
+    <div class="iconos">
+      <img src="img-grales/instagram-icon.png" alt="Instagram">
+      <img src="img-grales/facebook-icon.png" alt="Facebook">
+      <img src="img-grales/logomailgris.png" alt="Mail">
+      <img src="img-grales/logo-wsp-gris.png" alt="Whatsapp">
     </div>
-    <p>&copy; 2025 Espacio Alegría - Todos los derechos reservados</p>
+    <p>© 2025 Mi Espacio. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-const track = document.querySelector(".carrusel-track");
-const images = document.querySelectorAll(".carrusel-track img");
-const prevBtn = document.querySelector(".carrusel-btn.prev");
-const nextBtn = document.querySelector(".carrusel-btn.next");
-const indicador = document.querySelector(".carrusel-indicador");
-
-let index = 0;
-
-function updateCarrusel() {
-  track.style.transform = `translateX(${-index * 100}%)`;
-  indicador.textContent = `${index + 1} / ${images.length}`;
-}
-
-prevBtn.addEventListener("click", () => {
-  index = (index - 1 + images.length) % images.length;
-  updateCarrusel();
-});
-
-nextBtn.addEventListener("click", () => {
-  index = (index + 1) % images.length;
-  updateCarrusel();
-});
-
-updateCarrusel();
-</script>
-
+  <script src="script.js"></script>
+  <script src="carrusel.js"></script>
 </body>
 </html>
