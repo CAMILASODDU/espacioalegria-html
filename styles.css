@@ -530,14 +530,16 @@ footer .iconos img {
 }
 
 .actividades ul {
-  list-style: none;           /* quita los puntos feos del navegador */
+  list-style: none;
+  /* quita los puntos feos del navegador */
   padding-left: 0;
   margin: 10px 0 0;
 }
 
 .actividades ul li {
   position: relative;
-  padding-left: 22px;         /* espacio para el punto bonito */
+  padding-left: 22px;
+  /* espacio para el punto bonito */
   margin-bottom: 6px;
   font-size: 1rem;
   line-height: 1.4;
@@ -550,7 +552,8 @@ footer .iconos img {
   position: absolute;
   left: 0;
   top: 0;
-  color: #555;                /* podés cambiarlo */
+  color: #555;
+  /* podés cambiarlo */
   font-size: 1.2rem;
   line-height: 1;
 }
@@ -782,7 +785,8 @@ footer .iconos img {
   align-items: center;
   font-size: 18px;
   font-weight: 700;
-  color: #333; /* si querés la letra siempre blanca, avisame */
+  color: #333;
+  /* si querés la letra siempre blanca, avisame */
 }
 
 /* RESPONSIVE: achica círculos y texto en pantallas chicas */
@@ -888,3 +892,40 @@ h2 {
   color: #fff;
 }
 
+/* ==========================
+   BOTÓN FLOTANTE LINKTREE
+========================== */
+
+.linktree-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform .25s ease;
+}
+
+.linktree-float img {
+  width: 90px;
+  height: auto;
+  display: block;
+}
+
+.linktree-float:hover {
+  transform: scale(1.1) translateY(-3px);
+}
+
+@media (max-width:768px) {
+  .linktree-float {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .linktree-float img {
+    width: 75px;
+  }
+}
