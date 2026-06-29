@@ -690,6 +690,25 @@ footer .iconos img {
   }
 }
 
+/* ===========================
+   CARRUSEL ACTIVIDADES
+=========================== */
+
+.actividades-carrusel .carrusel-container {
+  width: 700px;
+  height: 450px;
+  margin: 40px auto;
+  /* centra el carrusel */
+}
+
+.actividades-carrusel .btn.prev {
+  left: 15px;
+}
+
+.actividades-carrusel .btn.next {
+  right: 15px;
+}
+
 /* FIN ESTILOS ACTIVIDADES */
 
 /* =============================
